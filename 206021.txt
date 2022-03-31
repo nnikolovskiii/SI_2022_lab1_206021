@@ -1,0 +1,135 @@
+4. 
+git clone https://github.com/nnikolovskiii/-SI_2022_lab1_206021
+- клонираме се што е во remote repo (README.txt)
+5.
+git commit -a -m "Add 5 items to the shopping lis"
+- го додаваме file-oт и правиме нов commit на master
+6.
+git commit -a -m "Add quantities to the items."
+- update на file-от и commit
+7.
+ git checkout -b branch1
+- креирање на нов branch
+8. 
+commit 27c886054f17e3511e17e63940b92dfd5c1557c0 (HEAD -> branch2, master, branch1)
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:35:50 2022 +0200
+
+    Add quantities (the real one)
+
+commit 95351ea7832c85969e5f08d8ed0ba340b3b69427
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:27:42 2022 +0200
+
+    Add quantities to the items.
+
+commit 9f7ef905770dc124b5f93bb2834cc42dd5368755 (origin/master, origin/HEAD)
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:23:12 2022 +0200
+
+    Update name surname
+
+commit 8b52e5382acc798b0580e785fff4f45bfa7cc70b
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:21:46 2022 +0200
+
+    Initial commit
+
+9.
+git push --all origin 
+- ги push-нува сите branches во remote repo
+
+10.  
+git checkout branch1 
+- се префрла од master во branch1
+11.
+ git commit -a -m "Change quantity of item #5"
+- од branche1 направив промена и направив commit
+
+12.
+git checkout master 
+
+13.git commit -a -m "Change quantity of item #2"
+- од master направив промена и направив commit
+
+14. git push --all origin 
+
+15.
+git checkout branch2
+
+16. git commit -a -m "Modify item #4"      
+
+17.
+commit b97b8089f17aec726ca4f1c81ddbce9371e4b0ce (HEAD -> branch2)
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:57:37 2022 +0200
+
+    Modify item #4
+
+commit 27c886054f17e3511e17e63940b92dfd5c1557c0 (origin/branch2)
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:35:50 2022 +0200
+
+    Add quantities (the real one)
+
+commit 95351ea7832c85969e5f08d8ed0ba340b3b69427
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:27:42 2022 +0200
+
+    Add quantities to the items.
+
+commit 9f7ef905770dc124b5f93bb2834cc42dd5368755
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:23:12 2022 +0200
+
+    Update name surname
+
+commit 8b52e5382acc798b0580e785fff4f45bfa7cc70b
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:21:46 2022 +0200
+
+    Initial commit
+
+18. git reset --soft HEAD^
+git commit -a -m "Modify item #4 and item #6"
+- враќаме commit да се модифицира(a да не се избрише) и правиме нов commit
+
+19. 
+commit 0da42b30c6a3cfd9f6e4ecac00a96b6f7a7f4a75 (HEAD -> branch2)
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 17:14:00 2022 +0200
+
+    Modify item #4 and item #6
+
+commit 27c886054f17e3511e17e63940b92dfd5c1557c0 (origin/branch2)
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:35:50 2022 +0200
+
+    Add quantities (the real one)
+
+commit 95351ea7832c85969e5f08d8ed0ba340b3b69427
+Author: nnikolovskiii <nikolovski.nikola42@gmail.com>
+Date:   Wed Mar 30 16:27:42 2022 +0200
+
+    Add quantities to the items.
+
+commit 9f7ef905770dc124b5f93bb2834cc42dd5368755
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:23:12 2022 +0200
+
+    Update name surname
+
+commit 8b52e5382acc798b0580e785fff4f45bfa7cc70b
+Author: nnikolovskiii <86115698+nnikolovskiii@users.noreply.github.com>
+Date:   Wed Mar 30 15:21:46 2022 +0200
+
+    Initial commit
+
+20.  git merge branch1
+
+21. git rebase не може поради модифицирање во двете гранки
+- ги решаваме проблемите со помош на IntelliJ алтка:
+branch2->master-> "Rebase brach2 into master", 
+ги прифатив сите проблеми и ги додаов сите item-и во финалниот .txt 
+file
+
